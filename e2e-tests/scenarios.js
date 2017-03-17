@@ -5,20 +5,20 @@
 describe('my app', function() {
 
 
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
+  it('should automatically redirect to /favorites when location hash/fragment is empty', function() {
     browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
+    expect(browser.getLocationAbsUrl()).toMatch("/favorites");
   });
 
 
-  describe('view1', function() {
+  describe('favorite_view', function() {
 
     beforeEach(function() {
-      browser.get('index.html#!/view1');
+      browser.get('index.html#!/favorites');
     });
 
 
-    it('should render view1 when user navigates to /view1', function() {
+    xit('should render favorite view when user navigates to /favorites', function() {
       expect(element.all(by.css('[ng-view] p')).first().getText()).
         toMatch(/partial for view 1/);
     });

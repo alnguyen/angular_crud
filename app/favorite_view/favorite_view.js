@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.favorite_view', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/favorite_view', {
+    templateUrl: 'favorite_view/favorite_view.html',
+    controller: 'FavoriteViewCtrl'
   });
 }])
 
-.controller('View1Ctrl', function($scope) {
+.controller('FavoriteViewCtrl', function($scope) {
   $scope.addFavoriteForm = {}
   $scope.favorites = [
     {name: 'Myrcenary', type: 'Beer', description: 'Best Double IPA Ever'}
