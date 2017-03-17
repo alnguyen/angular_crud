@@ -9,6 +9,20 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', function($scope) {
+  $scope.addFavoriteForm = {}
+  $scope.favorites = [
+    {name: 'Myrcenary', type: 'Beer', description: 'Best Double IPA Ever'}
+  ]
 
-}]);
+  $scope.addFavorite = function () {
+    $scope.favorites.push($scope.addFavoriteForm)
+    $scope.addFavoriteForm = {}
+  }
+
+  $scope.removeFavorite = function (removeFavorite) {
+    $scope.favorites = $scope.favorites.filter((favorite) => {
+      removeFavorite !== favorite
+    })
+  }
+});
