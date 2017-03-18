@@ -16,5 +16,10 @@ describe('my app', function() {
       expect(element.all(by.css('.header__title')).first().getText()).
         toMatch(/Simple Resource CRUD Form/);
     });
+
+    it('should render placeholder text when user navigates to /favorites', function () {
+      expect(element.all(by.css('.placeholder__text')).first().getText()).
+        toMatch(/No favorites!/);
+    })
   });
 });
