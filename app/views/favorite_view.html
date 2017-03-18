@@ -1,0 +1,27 @@
+<section>
+  <p class='error'>{{errorMsg}}</p>
+</section>
+<section>
+  <label>Name: <input type='text' ng-model='addFavoriteForm.name' /></label>
+  <label>Type: <input type='text' ng-model='addFavoriteForm.type' /></label>
+  <label>Description: <input type='text' ng-model='addFavoriteForm.description' /></label>
+  <input type='button' ng-click='addFavorite()' value='Add Favorite' />
+</section>
+<table ng-if='favorites.length > 0'>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+  <tr ng-repeat='favorite in favorites' ng-class-odd="'odd'">
+    <td>{{favorite.name}}</td>
+    <td>{{favorite.type}}</td>
+    <td>{{favorite.description}}</td>
+    <td><input type='button' ng-click='removeFavorite(favorite)' value='Remove' /></td>
+  </tr>
+</table>
+
+<section class='placeholder__container' ng-if='favorites.length === 0'>
+  <span class='placeholder__text'>No favorites!</span>
+</section>
