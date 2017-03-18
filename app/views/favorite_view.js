@@ -4,7 +4,7 @@ angular.module('myApp.favorite_view', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/favorites', {
-    templateUrl: 'views/favorite_view.html',
+    templateUrl: 'app/views/favorite_view.html',
     controller: 'FavoriteViewCtrl'
   });
 }])
