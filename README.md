@@ -11,3 +11,6 @@ Todo:
 - Move the add fields into an ngForm directive.  This will allow me to use it's validators too instead of writing my own dinky ones.
 - Better styling, maybe responsive design?  Maybe?  Definitely not my forte.  Good exploration topic.
 - More e2e testing.  Need to learn me some protractor.
+
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/alnguyen/angular_crud.svg)](https://greenkeeper.io/)
